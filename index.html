@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <h1 class="game-title">MindFlip</h1>
+ <br>
+ <p>Flip. Match. Win.</p>
+ <br><br>
+
+<div class="app-container">
+  <div class="game-content">
+
+    <div class="info">
+      <p>Level: <span id="level">1</span></p>
+      <p>Time: <span id="time">20</span>s</p>
+    </div>
+
+    <div class="game-board" id="gameBoard"></div>
+
+    <p id="message"></p>
+
+    <button onclick="startGame()">Start / Restart</button>
+
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
