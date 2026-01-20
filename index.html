@@ -2,33 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memory Card Game</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
- <h1 class="game-title">MindFlip</h1>
- <br>
- <p>Flip. Match. Win.</p>
- <br><br>
+  <h1 class="game-title">MindFlip</h1>
+  <p>Flip. Match. Win.</p>
 
-<div class="app-container">
-  <div class="game-content">
+  <div class="app-container">
+    <div class="game-content">
 
-    <div class="info">
-      <p>Level: <span id="level">1</span></p>
-      <p>Time: <span id="time">20</span>s</p>
+      <div class="info">
+        <p>Level: <span id="level">1</span></p>
+        <p>Time: <span id="time">20</span>s</p>
+      </div>
+
+      <div class="game-board" id="gameBoard"></div>
+
+      <p id="message"></p>
+
+      <button onclick="startGame()">Start / Restart</button>
+
     </div>
-
-    <div class="game-board" id="gameBoard"></div>
-
-    <p id="message"></p>
-
-    <button onclick="startGame()">Start / Restart</button>
-
   </div>
-</div>
 
-  <script src="script.js"></script>
+  <script src="script.js">
+   
+  </script>
+
 </body>
 </html>
