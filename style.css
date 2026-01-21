@@ -23,7 +23,7 @@
     }
 
     .app-container {
-      width: 420px;
+      width: var(--container-width, 420px);
       background: #0f172a;
       border-radius: 18px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.6);
@@ -51,8 +51,8 @@
 
     .game-board {
       display: grid;
-      grid-template-columns: repeat(3, 110px);
-      gap: 14px;
+      grid-template-columns: repeat(var(--columns, 3), 110px);
+      gap: 14px;  
       justify-content: center;
       margin: 18px 0;
     }

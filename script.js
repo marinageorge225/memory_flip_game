@@ -1,13 +1,13 @@
  /* ================= GAME SETTINGS ================= */
 
     const levels = [
-      { cards: 6 },
-      { cards: 12 },
-      { cards: 18 }
+      { cards: 6, columns: 3 },
+      { cards: 12, columns: 4 },
+      { cards: 16, columns: 4 }
     ];
 
     const BASE_TIME = 20;
-    const TIME_INCREMENT = 5;
+    const TIME_INCREMENT = 15;
 
    const symbols = [
   "images/img1.png",
@@ -66,7 +66,12 @@
       startTimer();
 
       const totalCards = levels[currentLevel].cards;
-      gameBoard.style.gridTemplateColumns = "repeat(3, 110px)";
+      const columns = levels[currentLevel].columns;
+      const boardWidth = (columns * 110) + ((columns - 1) * 14) + 36;
+      
+      gameBoard.style.setProperty('--columns', columns);
+      document.querySelector('.app-container').style.setProperty('--container-width', boardWidth + 'px');
+
 
       const selectedSymbols = symbols.slice(0, totalCards / 2);
       const cardsArray = [...selectedSymbols, ...selectedSymbols].sort(
